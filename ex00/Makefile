@@ -4,9 +4,9 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = animal
 
-SRCS = Animal.cpp Cat.cpp Dog.cpp main.cpp
+SRCS = $(wildcard *.cpp)
 
-HEADERS = Animal.hpp Cat.hpp Dog.hpp
+HEADERS = $(wildcard *.hpp)
 
 OBJS = $(SRCS:.cpp=.o)
 
