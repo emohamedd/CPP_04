@@ -1,22 +1,22 @@
-CC = c++
+CXX = c++
 
-CFLAGS = -Wall -Wextra -Werror 
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Animal
+NAME = animal
 
-SRCS = $(wildcard *.cpp)
+SRCS = Animal.cpp Cat.cpp Dog.cpp main.cpp
 
-HEADERS = $(wildcard *.hpp)
+HEADERS = Animal.hpp Cat.hpp Dog.hpp
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
-%.o: %.c $(HEADERS)
-	$(CC) $(CFLAGS) -c $< -o $@
+%.o: %.cpp $(HEADERS)
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS) $(HEADERS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	rm -f $(OBJS)
