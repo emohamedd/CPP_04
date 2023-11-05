@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:51:05 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/02 11:20:48 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/05 14:57:24 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Dog::Dog(){
     std::cout << "Dog Constructor Called" << std::endl;
+    this->brain = new Brain();
     this->type = "Dog";
 }
 Dog::Dog(const Dog & src){
@@ -26,7 +27,8 @@ Dog & Dog::operator=(const Dog & src){
     return *this;
 }
 Dog::~Dog(){
-        std::cout << "Destructor Called" << std::endl;    
+        std::cout << "Destructor Called" << std::endl;
+        delete this->brain;    
 
 }
 

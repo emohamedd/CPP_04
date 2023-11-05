@@ -6,13 +6,13 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:48:21 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/04 21:41:42 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/05 14:37:50 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "Animal.hpp"
-
+#include "Brain.hpp"
 class Cat : public Animal{
     public:
         Cat();
@@ -20,7 +20,8 @@ class Cat : public Animal{
         Cat & operator=(const Cat & src);
         ~Cat();
         void makeSound() const;
-    public:
+        void setter(Brain *new_brain);
+    private:
         Brain *brain;
 };
 

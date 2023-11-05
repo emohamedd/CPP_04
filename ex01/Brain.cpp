@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 21:37:50 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/04 21:51:40 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/05 14:57:12 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ Brain::Brain(const Brain & src){
     std::cout << "Brain copy constructor called" << std::endl;
     *this = src;
 }
-Brain::Brain & operator=(const Brain & src){
+Brain & Brain::operator=(const Brain & src){
     std::cout << "Brain assignation operator called" << std::endl;
-    if (this != &src)
-        this->ideas = src.ideas;
+    for (int i = 0; i < 100; i++)
+        this->ideas[i] = src.ideas[i];
     return (*this);
 }
 Brain::~Brain(){

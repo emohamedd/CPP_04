@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:53:20 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/02 11:20:46 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/05 14:39:59 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Cat::Cat(){
     std::cout << "Cat Constructor Called" << std::endl;
+    this->brain = new Brain();
     this->type = "Cat";
 }
 Cat::Cat(const Cat & src){
@@ -26,7 +27,8 @@ Cat & Cat::operator=(const Cat & src){
     return *this;
 }
 Cat::~Cat(){
-    std::cout << "Destructor Called" << std::endl;    
+    std::cout << "Destructor Called" << std::endl;  
+     delete this->brain;    
 }
 
 void Cat::makeSound() const{
