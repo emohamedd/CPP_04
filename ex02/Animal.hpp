@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:46:31 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/06 15:15:56 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/06 15:25:45 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class AAnimal{
     AAnimal & operator=(const AAnimal & src);
      ~AAnimal();
     virtual void makeSound() const = 0;
-    virtual std::string getType() const = 0;  
+    std::string getType() const ;  
       
 };
 class WrongAnimal{

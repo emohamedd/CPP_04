@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 11:19:57 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/06 15:16:59 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/06 15:26:21 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,24 @@
 #include "Animal.hpp"
 
 AAnimal::AAnimal(){
-    std::cout << "Animal Default Constructor Called" << std::endl;
-    this->type = "Animals";  
+    std::cout << "AAnimal Default Constructor Called" << std::endl;
+    this->type = "AAnimals";  
 }
 
 AAnimal::AAnimal(const AAnimal& src){
-    std::cout << "Animal Copy Constructor Called" << std::endl;
+    std::cout << "AAnimal Copy Constructor Called" << std::endl;
     *this = src;
 }
 AAnimal & AAnimal::operator=(const AAnimal & src){
-    std::cout << "Animal Assignment Operator Called" << std::endl;
+    std::cout << "AAnimal Assignment Operator Called" << std::endl;
     this->type = src.type;
     return *this;
 }
 AAnimal::~AAnimal(){
-    std::cout << "Animal Destructor Called" << std::endl;
+    std::cout << "AAnimal Destructor Called" << std::endl;
+}
+
+
+std::string AAnimal::getType() const{
+    return (this->type);
 }
