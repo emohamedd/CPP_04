@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:53:20 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/05 14:39:59 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:10:40 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Cat::Cat(){
 }
 Cat::Cat(const Cat & src){
     std::cout << "Cat Copy Constructor Called" << std::endl;
+    this->brain = new Brain();
     *this = src;
 }
 Cat & Cat::operator=(const Cat & src){

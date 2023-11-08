@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 11:10:44 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/02 12:20:26 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/08 10:39:17 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,14 @@ int main()
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
     std::cout << "\n" << "The animals sound :" << std::endl;
-    i->makeSound(); //will output the cat sound!
+    i->makeSound();
     j->makeSound();
     meta->makeSound();
     std::cout << "\n" << "The animals Wrong sound : " << std::endl;
     test->makeSound();
     test2->makeSound();
+    delete meta;
+    delete j;
+    delete i;
     return 0;
 }

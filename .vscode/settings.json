@@ -1,3 +1,15 @@
 {
-    "discord.smallImage": "VS Code"
+    "discord.smallImage": "VS Code",
+    "files.associations": {
+        "__config": "cpp",
+        "__string": "cpp",
+        "algorithm": "cpp",
+        "cstddef": "cpp",
+        "functional": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "complex": "cpp",
+        "new": "cpp",
+        "iostream": "cpp"
+    }
 }

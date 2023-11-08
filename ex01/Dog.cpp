@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:51:05 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/05 14:57:24 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:10:19 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Dog::Dog(){
 }
 Dog::Dog(const Dog & src){
     std::cout << "Dog Copy Constructor Called" << std::endl;
+    this->brain = new Brain();
     *this = src;
 }
 Dog & Dog::operator=(const Dog & src){

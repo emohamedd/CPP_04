@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 21:37:50 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/05 14:57:12 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:09:24 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ Brain & Brain::operator=(const Brain & src){
 }
 Brain::~Brain(){
     std::cout << "Brain destructor called" << std::endl;
+     delete [] this->ideas; 
 }
