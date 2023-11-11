@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 11:19:58 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/08 11:24:59 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/11 14:43:49 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,10 @@ Ice& Ice::operator=(const Ice & src){
     this->type = src.type;
     return *this;
 }
-Ice::Ice(){
+Ice::~Ice(){
     std::cout << "Ice destructor called" << std::endl;
 }
 
-
-
+AMateria* Ice::clone() const{
+    return new Ice(*this);
+}

@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 11:23:19 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/08 11:24:50 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/11 14:44:01 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,7 @@ Cure& Cure::operator=(const Cure & src){
 }
 Cure::~Cure(){
     std::cout << "Cure destructor called" << std::endl;
+}
+AMateria* Cure::clone() const{
+    return new Cure(*this);
 }
