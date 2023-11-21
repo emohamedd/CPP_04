@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:51:05 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/05 14:57:24 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/21 16:12:52 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,14 @@ Dog::Dog(const Dog & src){
 Dog & Dog::operator=(const Dog & src){
     std::cout << "Dog Assignment Operator Called" << std::endl;
     this->type = src.type;
+    delete this->brain;
+    this->brain = new Brain();
+     int i = 0;
+    while (i < 100)
+    {
+         this->brain[i] = src.brain[i];
+         i++;
+    }
     return *this;
 }
 Dog::~Dog(){

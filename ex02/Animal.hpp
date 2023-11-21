@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:46:31 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/06 15:25:45 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/21 15:37:08 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,7 @@ class AAnimal{
     AAnimal();
     AAnimal(const AAnimal & src);
     AAnimal & operator=(const AAnimal & src);
-     ~AAnimal();
+    virtual ~AAnimal();
     virtual void makeSound() const = 0;
     std::string getType() const ;  
-      
-};
-class WrongAnimal{
-  protected:
-    std::string type;
-  public:
-    WrongAnimal();
-    WrongAnimal(const WrongAnimal & src);
-    WrongAnimal & operator=(const WrongAnimal & src);
-     ~WrongAnimal();
-    void makeSound() const;
-    std::string getType() const;  
-      
 };

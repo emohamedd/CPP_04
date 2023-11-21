@@ -1,13 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.cpp                                     :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/11 14:36:55 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/11 14:39:25 by emohamed         ###   ########.fr       */
+/*   Created: 2023/11/21 14:49:01 by emohamed          #+#    #+#             */
+/*   Updated: 2023/11/21 15:56:12 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ICharacter.hpp"
+#pragma once
+#include <iostream>
+
+class WrongAnimal{
+  protected:
+    std::string type;
+  public:
+    WrongAnimal();
+    WrongAnimal(const WrongAnimal & src);
+    WrongAnimal & operator=(const WrongAnimal & src);
+     ~WrongAnimal();
+    void makeSound() const;
+    std::string getType() const;  
+      
+};
+

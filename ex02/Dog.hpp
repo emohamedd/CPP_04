@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:49:15 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/06 15:15:37 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/21 15:19:28 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,6 @@ class Dog : public AAnimal{
         Dog & operator=(const Dog & src);
         ~Dog();
         void makeSound() const;
-         void setter(Brain *new_brain);
     private:
         Brain *brain;
-        
-        
 };  

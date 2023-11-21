@@ -6,7 +6,7 @@
 /*   By: emohamed <emohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:48:21 by emohamed          #+#    #+#             */
-/*   Updated: 2023/11/05 14:37:50 by emohamed         ###   ########.fr       */
+/*   Updated: 2023/11/21 15:13:16 by emohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,3 @@ class Cat : public Animal{
         Brain *brain;
 };
 
-class WrongCat : public WrongAnimal{
-    public:
-        WrongCat();
-        WrongCat(const WrongCat & src);
-        WrongCat & operator=(const WrongCat & src);
-        ~WrongCat();
-        void makeSound() const;
-};  
